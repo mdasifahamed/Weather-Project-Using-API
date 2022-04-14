@@ -16,9 +16,11 @@ app.get('/', function(req,res){
       console.log(weatherData);
       console.log(temp);
       console.log(descp);
+      res.write("<h1>The temperature today at Dhaka is " + temp  + " Degree Celcius</h1>");
+      res.write("<p>The envirounment is </p>" + descp);
+      res.send();
     })
   })
-  res.send("Server is running")
 });
 
 
